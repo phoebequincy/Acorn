@@ -11,8 +11,6 @@ Coming soon . . .
 
 
 ## Wireframe
-![alt text](public/images/acorn_style_guide.png "Acorn Wire Frame")
-
 [Live Wireframe Prototype](https://xd.adobe.com/view/6c9a3119-de27-4519-5191-2e318be82058-1aab/)
 
 [Live Wireframe Walkthrough Video](https://vimeo.com/321647356)
@@ -22,4 +20,4 @@ Coming soon . . .
 [Trello Planning Board](https://trello.com/b/xQnuFAwx/phoebeq4project)
 
 ## Entity Relationship Diagram
-![alt text](public/images/Acorn-ERD.png "Acorn ERD")
+![alt text](public/images/acorn_style_guide.png "Acorn ERD")
