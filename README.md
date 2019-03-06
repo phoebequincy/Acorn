@@ -1,5 +1,5 @@
-# Acorn - Good things to get you through the dark times.
-Like squirrels storing acorns for the winter, Acorn provides a store-house of instant support when you are struggling to get through dark days. Acorns can have suggested activities, nuggets of wisdom, simple comforts and inspiration for self-care. Try Acorns, add your own, share with a friend!
+# Acorn - Good things to get you through dark times.
+Like squirrels storing acorns for the winter, Acorn provides a store-house of instant support when you are struggling to get through hard times. Acorns can have suggested activities, nuggets of wisdom, simple comforts and inspiration for self-care. Try Acorns, add your own, share with a friend!
 
 
 ## Deployed Site
@@ -20,4 +20,4 @@ Coming soon . . .
 [Trello Planning Board](https://trello.com/b/xQnuFAwx/phoebeq4project)
 
 ## Entity Relationship Diagram
-![alt text](public/images/Acorn ER Diagram.png "Acorn ERD")
+![alt text](public/images/Acorn_ER_Diagram.png "Acorn ERD")
