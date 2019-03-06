@@ -15,7 +15,7 @@ Coming soon . . .
 
 [Live Wireframe Prototype](https://xd.adobe.com/view/6c9a3119-de27-4519-5191-2e318be82058-1aab/)
 
-[Live Wireframe Walkthrough Video](https://vimeo.com/321591711)
+[Live Wireframe Walkthrough Video](https://vimeo.com/321647356)
 
 
 ## Planning
