@@ -7,7 +7,7 @@ Coming soon . . .
 
 
 ## Style Guide
-![alt text](public/images/acorn_style_guide.png "Acorn Style Guide")
+![alt text](public/images/acorn_style-guide.png "Acorn Style Guide")
 
 
 ## Wireframe
