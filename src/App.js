@@ -92,13 +92,15 @@ this.randomAcorn()
     render() {
     return (
       <div className="App" >
+      <div className="container-fluid">
       {this.state.acornDisplay.title}
       <br/>
       {this.state.acornDisplay.category}
       <br/>
       {this.state.acornDisplay.content}
       </div>
-        // <div className="container-fluid">
+      </div>
+        //
         //   <Header
         //     handleSearch={this.handleSearch}
         //     composeShowHide={this.composeShowHide}
