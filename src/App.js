@@ -6,6 +6,21 @@ import './App.css';
 
 class App extends Component {
 
+  constructor() {
+    super();
+      this.state = {
+      login : false,
+      }
+    }
+
+    toggleLogin = () => {
+      this.setState({
+        ...this.state,
+        login : !this.state.login
+      })
+    }
+
+
 
 // https://acorns4darkdays.herokuapp.com
 
@@ -14,15 +29,14 @@ class App extends Component {
 
     render() {
     return (
-      <div className="App">
-        <div className="container">
-            <Toolbar
+      <div>
+        <div>
 
-            />
+        {this.state.login ? <Acorns/> : <Toolbar
+          toggleLogin = {this.toggleLogin}/>}
 
-            <Acorns
 
-            />
+
         </div>
       </div>
 

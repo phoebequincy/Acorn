@@ -4,7 +4,7 @@ import {
   FormGroup, Label, Input,
   Button, FormText, FormFeedback,
 } from 'reactstrap';
-import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -49,13 +49,17 @@ class App extends Component {
     return (
       <Container className="App">
         <h2>Sign In</h2>
-        <Form className="form" onSubmit={ (e) => this.submitForm(e) }>
+        <Form className="form" onSubmit={ (e) =>{
+          this.submitForm(e)
+          this.props.toggleLogin()
+        }}>
           <Col>
             <FormGroup>
               <Label>Username</Label>
               <Input
                 type="email"
                 name="email"
+                required
                 id="exampleEmail"
                 placeholder="myemail@email.com"
                 value={ email }
@@ -85,6 +89,7 @@ class App extends Component {
                 placeholder="********"
                 value={ password }
                 onChange={ (e) => this.handleChange(e) }
+                required
             />
             </FormGroup>
           </Col>
