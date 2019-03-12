@@ -7,7 +7,7 @@ Coming soon . . .
 
 
 ## Style Guide
-![Acorn Style Guide](images/acorn_style-guide.png)
+![Acorn Style Guide](src/images/acorn_style-guide.png)
 
 
 ## Wireframe
@@ -20,4 +20,4 @@ Coming soon . . .
 [Trello Planning Board](https://trello.com/b/xQnuFAwx/phoebeq4project)
 
 ## Entity Relationship Diagram
-![Acorn ERD](images/Acorn_ER_Diagram.png)
+![Acorn ERD](src/images/Acorn_ER_Diagram.png)
