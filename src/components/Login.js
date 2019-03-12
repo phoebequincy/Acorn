@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 
 
-class App extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
       this.state = {
@@ -100,4 +100,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Login;

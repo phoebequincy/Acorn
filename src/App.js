@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Toolbar from './components/Toolbar';
+import Login from './components/Login';
 import Acorns from './components/Acorns';
-import './App.css';
+import './/stylesheets/Login.css';
+import Navigation from './components/Navigation';
 
 
 class App extends Component {
@@ -31,8 +32,8 @@ class App extends Component {
     return (
       <div>
         <div>
-
-        {this.state.login ? <Acorns/> : <Toolbar
+        <Navigation />
+        {this.state.login ? <Acorns/> : <Login
           toggleLogin = {this.toggleLogin}/>}
 
 
