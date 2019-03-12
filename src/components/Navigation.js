@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Navigation extends React.Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -16,19 +16,28 @@ export default class Navigation extends React.Component {
       collapsed: !this.state.collapsed
     });
   }
+
+
   render() {
+
     return (
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
+          <NavbarBrand href="/" className="mr-auto">Acorn</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/">Login</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="/components/">Acorns</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/components/">Share</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/components/">Account</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -37,3 +46,4 @@ export default class Navigation extends React.Component {
     );
   }
 }
+export default Navigation;
