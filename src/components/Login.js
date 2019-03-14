@@ -47,7 +47,7 @@ class Login extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <Container className="App">
+      <Container className="Login">
         <h2>Welcome</h2>
         <Form className="form" onSubmit={ (e) =>{
           this.submitForm(e)
