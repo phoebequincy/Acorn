@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
 import Navstyle from '../stylesheets/Navstyle.css'
 
 class Navigation extends Component {
@@ -21,24 +22,36 @@ class Navigation extends Component {
 
   render() {
 
+
+
     return (
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="navbar"></NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <NavbarBrand
+            id="logo"
+            className="navbar">
+            <h2>Acorn</h2>
+          </NavbarBrand>
+          <NavbarToggler
+            onClick={this.toggleNavbar}
+            id="menu" className="mr-2"
+          />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/components/">Login</NavLink>
+                <NavLink
+                  className="link"
+                  id="link"
+                  >Login</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Acorns</NavLink>
+                <NavLink id="link" href="/components/">Acorns</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Share</NavLink>
+                <NavLink id="link" href="/components/">Share</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Account</NavLink>
+                <NavLink id="link" href="/components/">Account</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
