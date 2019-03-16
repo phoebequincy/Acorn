@@ -1,14 +1,7 @@
 .navbar {
-  font-family: 'Baloo', cursive;
-  background-color: black;
-  background-image: url("../images/geran-de-klerk-355392-unsplash.jpg");
+  font-family: 'Roboto', cursive;
 }
 
 #link {
-  color: #f79020;
-}
-/* url("../images/acornlogo.png") */
-
-.navbar-toggler-icon {
-  color: white
+  color: white;
 }

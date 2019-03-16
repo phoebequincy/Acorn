@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Container, Col, Form,
+  Container, Col, Form, Row,
   FormGroup, Label, Input,
   Button, FormText, FormFeedback,
 } from 'reactstrap';
@@ -48,7 +48,7 @@ class Login extends Component {
     const { email, password } = this.state;
     return (
       <Container id="loginbox" className="Login">
-        <h2>Welcome</h2>
+        <h2>Welcome!</h2>
         <Form className="form" onSubmit={ (e) =>{
           this.submitForm(e)
           this.props.toggleLogin()
@@ -79,6 +79,7 @@ class Login extends Component {
               <FormText>Your username is most likely your email.</FormText>
             </FormGroup>
           </Col>
+
           <Col>
             <FormGroup>
               <Label for="examplePassword">Password</Label>
@@ -92,14 +93,32 @@ class Login extends Component {
             />
             </FormGroup>
           </Col>
-          <Button>Submit</Button>
-      </Form>
-      <Col>
-      <Button className = "button" onClick={ (e) =>{
-        this.submitForm(e)
-        this.props.toggleLogin()
-      }}>Continue as a Guest</Button>
-      </Col>
+
+          
+            <Row>
+              <Col>
+                <Button>Submit</Button>
+              </Col>
+            </Row>
+            <Row className = "py-2">
+              <Col>
+                <Button className = "button" onClick={ (e) =>{
+                  this.submitForm(e)
+                  this.props.toggleSignup()
+                }}>Sign Up</Button>
+              </Col>
+              <Col className="align-self-end">
+                <Row className="justify-content-end">
+                  <Button className="button" onClick={ (e) =>{
+                    this.submitForm(e)
+                    this.props.toggleLogin()
+                  }}>Continue as a Guest</Button>
+                </Row>
+              </Col>
+            </Row>
+
+
+        </Form>
       </Container>
     );
   }
