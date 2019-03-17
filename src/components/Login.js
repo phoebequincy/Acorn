@@ -79,7 +79,6 @@ class Login extends Component {
               <FormText>Your username is most likely your email.</FormText>
             </FormGroup>
           </Col>
-
           <Col>
             <FormGroup>
               <Label for="examplePassword">Password</Label>
@@ -93,8 +92,6 @@ class Login extends Component {
             />
             </FormGroup>
           </Col>
-
-          
             <Row>
               <Col>
                 <Button>Submit</Button>
@@ -116,8 +113,6 @@ class Login extends Component {
                 </Row>
               </Col>
             </Row>
-
-
         </Form>
       </Container>
     );

@@ -4,6 +4,7 @@ import Acorns from './components/Acorns';
 import './/stylesheets/Loginstyle.css';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import Signup from './components/Signup';
 // https://acorns4darkdays.herokuapp.com
 
 class App extends Component {
@@ -13,13 +14,14 @@ class App extends Component {
       this.state = {
       login : false,
       showLogin : false,
+      signup : false,
       }
     }
 
     showLogin = () => {
       this.setState({
         ...this.state,
-        login : this.state.showLogin
+        showLogin : !this.state.showLogin
       })
     }
 
@@ -27,6 +29,13 @@ class App extends Component {
       this.setState({
         ...this.state,
         login : !this.state.login
+      })
+    }
+
+    toggleSignup = () => {
+      this.setState({
+        ...this.state,
+        signup : !this.state.signup
       })
     }
 
@@ -44,9 +53,6 @@ class App extends Component {
         {!this.state.login && this.state.showLogin ? <Login toggleLogin = {this.toggleLogin}/> : null}
 
         {this.state.login && !this.state.showLogin ? <Acorns /> : null}
-
-
-
 
         </div>
       </div>
