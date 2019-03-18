@@ -1,43 +1,17 @@
 import React, { Component } from 'react';
-import Login from './components/Login';
-import Acorns from './components/Acorns';
-import './/stylesheets/Loginstyle.css';
-import Navigation from './components/Navigation';
+import { Route } from 'react-router-dom'
+import NavBar from './components/NavBar';
 import Home from './components/Home';
+import Acorns from './components/Acorns';
+import Login from './components/Login';
 import Signup from './components/Signup';
+import MyAcorns from './components/MyAcorns';
+import Share from './components/Share';
+
 // https://acorns4darkdays.herokuapp.com
 
 class App extends Component {
 
-  constructor() {
-    super();
-      this.state = {
-      login : false,
-      showLogin : false,
-      signup : false,
-      }
-    }
-
-    showLogin = () => {
-      this.setState({
-        ...this.state,
-        showLogin : !this.state.showLogin
-      })
-    }
-
-    toggleLogin = () => {
-      this.setState({
-        ...this.state,
-        login : !this.state.login
-      })
-    }
-
-    toggleSignup = () => {
-      this.setState({
-        ...this.state,
-        signup : !this.state.signup
-      })
-    }
 
     render() {
 
@@ -45,14 +19,13 @@ class App extends Component {
     return (
       <div>
         <div>
-        <Navigation />
-        {this.state.login ? null : <Home />}
-
-        {!this.state.login && this.state.showLogin ? <Home /> : null}
-
-        {!this.state.login && this.state.showLogin ? <Login toggleLogin = {this.toggleLogin}/> : null}
-
-        {this.state.login && !this.state.showLogin ? <Acorns /> : null}
+          <NavBar />
+          <Route path="/" exact component={Home} />
+          <Route path="/acorns" component={Acorns} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/photos" component={MyAcorns} />
+          <Route path="/share" component={Share} />
 
         </div>
       </div>

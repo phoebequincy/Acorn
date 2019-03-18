@@ -31,7 +31,6 @@ import {Container, Col, Row } from 'reactstrap';
 
 render() {
     return (
-
       <Container>
         <Row>
           <Col xs="4">{this.state.acornDisplay.title} </Col>
@@ -41,15 +40,6 @@ render() {
             <Col>{this.state.acornDisplay.content}</Col>
           </Row>
       </Container>
-
-
-
-
-
-
-
-
-
     );
   }
 }

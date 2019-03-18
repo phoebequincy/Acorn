@@ -1,10 +1,8 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-
-
+import { Container, Row, Col, Link, Button } from 'reactstrap';
+import Homestyle from "../stylesheets/Homestyle.css";
 
 const Home = (props) => {
-
 
   return (
     <Container>
@@ -14,34 +12,28 @@ const Home = (props) => {
         </Col>
       </Row>
         <Col>
-          <h1 className="text-center"><em>Good things to get you through dark times.</em></h1>
+          <h3 className="text-center"><em>Good things to get you through dark times.</em></h3>
             <hr className="my-2" />
               <p className="text-center">A store-house for instant support, wisdom and simple comforts.</p>
               <p className="lead"></p>
               <p>
             <Col className="text-center">
-              <button type="button" href="./components/Acorns" className="btn btn-outline-secondary" onSubmit={ (e) =>{
-                this.submit(e)
-                this.props.toggleLogin()
-              }}>Get an Acorn!</button>
+              <Button outline color="secondary" href="./Acorns">Get an Acorn!</Button>
             </Col>
             </p>
         </Col>
-        <Col className="text-center">
-          <p>
-          <button type="button" href="./Login" className="btn btn-outline-success" onClick={ (e) =>{
-            this.submit(e)
-            this.props.showLogin()
-          }}>Login</button>
-          </p>
-          <p>
-         <button type="button lg" href="./Account" className="btn btn-outline-info" onClick={ (e) =>{
-           this.submit(e)
-           this.props.toggleSignup()
-         }}>Sign Up</button>
-         </p>
-        </Col>
-      </Container>
+          <Col className="text-center">
+
+            <p>
+              <Button outline color="success" href="./Login">Login</Button>
+            </p>
+
+            <p>
+              <Button outline color="info" href="./Signup">Sign Up</Button>
+            </p>
+
+          </Col>
+    </Container>
   );
 }
 

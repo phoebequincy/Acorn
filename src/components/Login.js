@@ -94,19 +94,19 @@ class Login extends Component {
           </Col>
             <Row>
               <Col>
-                <Button>Submit</Button>
+                <Button outline color="success">Submit</Button>
               </Col>
             </Row>
             <Row className = "py-2">
               <Col>
-                <Button className = "button" onClick={ (e) =>{
+                <Button outline color="info" onClick={ (e) =>{
                   this.submitForm(e)
                   this.props.toggleSignup()
                 }}>Sign Up</Button>
               </Col>
               <Col className="align-self-end">
                 <Row className="justify-content-end">
-                  <Button className="button" onClick={ (e) =>{
+                  <Button outline color="secondary" onClick={ (e) =>{
                     this.submitForm(e)
                     this.props.toggleLogin()
                   }}>Continue as a Guest</Button>
