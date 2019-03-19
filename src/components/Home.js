@@ -23,7 +23,6 @@ const Home = (props) => {
             </p>
         </Col>
           <Col className="text-center">
-
             <p>
               <Button outline color="success" href="./Login">Login</Button>
             </p>
@@ -31,7 +30,6 @@ const Home = (props) => {
             <p>
               <Button outline color="info" href="./Signup">Sign Up</Button>
             </p>
-
           </Col>
     </Container>
   );
