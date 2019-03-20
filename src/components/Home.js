@@ -18,19 +18,10 @@ const Home = (props) => {
               <p className="lead"></p>
               <p>
             <Col className="text-center">
-              <Button outline color="secondary" href="./Acorns">Get an Acorn!</Button>
+              <Button outline color="success" href="./Acorns">Get an Acorn!</Button>
             </Col>
             </p>
         </Col>
-          <Col className="text-center">
-            <p>
-              <Button outline color="success" href="./Login">Login</Button>
-            </p>
-
-            <p>
-              <Button outline color="info" href="./Signup">Sign Up</Button>
-            </p>
-          </Col>
     </Container>
   );
 }

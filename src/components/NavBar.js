@@ -22,7 +22,7 @@ const linkInfo = [
     },
     {
         path: '/AcornsList',
-        text: 'Acorn Library'
+        text: 'Acorns Library'
     },
     {
         path: '/Share',
@@ -64,7 +64,7 @@ class NavBar extends Component {
                 </NavItem>
 
                 <NavItem>
-                  <NavbarLink href="/AcornsList/">Acorn Library</NavbarLink>
+                  <NavbarLink href="/AcornsList/">Acorns Library</NavbarLink>
                 </NavItem>
 
                 <NavItem>
