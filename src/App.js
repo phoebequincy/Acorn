@@ -3,15 +3,71 @@ import { Route } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Acorns from './components/Acorns';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import MyAcorns from './components/MyAcorns';
-import Share from './components/Share';
+import AcornsList from './components/AcornsList';
 
-// https://acorns4darkdays.herokuapp.com
+
+{/*https://acorns4darkdays.herokuapp.com*/}
 
 class App extends Component {
 
+  state = {
+
+    acorns:{},
+    filterString: '',
+    composeOn: false
+  }
+
+  async componentDidMount() {
+    const response = await fetch('http://localhost:3000/acorns')
+    const json = await response.json()
+
+    this.setState({...this.state, acorns: json} )
+  }
+
+
+  composeShowHide = () => {
+    this.setState({ composeOn: !this.state.composeOn })
+  }
+
+  addNewAcorn = async (acorn) => {
+        const response = await fetch('http://localhost:3000/acorns', {
+          method: 'POST',
+          body: JSON.stringify(acorn),
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        })
+        const json = await response.json()
+        this.setState({
+          ...this.state,
+          acorns: [...this.state.acorns, json]
+    })
+  }
+
+      deleteAcorn = async (messageId) => {
+      const response = await fetch(`'http://localhost:3000/acorns'/${acornId}`, {
+            method: 'DELETE',
+            headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        })
+        const json = await response.json()
+        let index = this.state.acorns.findIndex( acorn => {
+          return acorn.id === json.id
+        })
+        this.setState({
+          ...this.state,
+          acorns: [...this.state.acorns.slice(0,index), ...this.state.acorns.slice(index + 1)]
+        })
+      }
+
+      handleSearch = (e) => {
+      let newState = {...this.state}
+      newState.filterString = e.target.value.toLowerCase()
+      this.setState({filterString : newState.filterString})
+      }
 
     render() {
 
@@ -20,13 +76,17 @@ class App extends Component {
       <div>
         <div>
           <NavBar />
-          <Route path="/" exact component={Home} />
-          <Route path="/acorns" component={Acorns} />
-          <Route path="/login" component={Login} />
-      {/*<Route path="/signup" component={Signup} />*/}
-        {/*  <Route path="/myacorns" component={MyAcorns} />
-          <Route path="/share" component={Share} />}*/}
+            <Route path="/" exact component={Home} />
+            <Route path="/acorns" component={Acorns} />
 
+
+            <AcornsList
+              renderAcorns={this.renderAcorns}
+              acorns={this.state.acorns}
+              deleteAcorn={this.deleteAcorn}
+              editAcorn={this.editAcorn}
+              filterString={this.state.filterString}
+            />
         </div>
       </div>
 
