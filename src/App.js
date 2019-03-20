@@ -4,9 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Acorns from './components/Acorns';
 import AcornsList from './components/AcornsList';
-
-
-{/*https://acorns4darkdays.herokuapp.com*/}
+import Share from './components/Share';
 
 class App extends Component {
 
@@ -45,23 +43,6 @@ class App extends Component {
     })
   }
 
-      deleteAcorn = async (messageId) => {
-      const response = await fetch(`'http://localhost:3000/acorns'/${acornId}`, {
-            method: 'DELETE',
-            headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        })
-        const json = await response.json()
-        let index = this.state.acorns.findIndex( acorn => {
-          return acorn.id === json.id
-        })
-        this.setState({
-          ...this.state,
-          acorns: [...this.state.acorns.slice(0,index), ...this.state.acorns.slice(index + 1)]
-        })
-      }
 
       handleSearch = (e) => {
       let newState = {...this.state}
@@ -71,22 +52,14 @@ class App extends Component {
 
     render() {
 
-
     return (
       <div>
         <div>
           <NavBar />
             <Route path="/" exact component={Home} />
             <Route path="/acorns" component={Acorns} />
-
-
-            <AcornsList
-              renderAcorns={this.renderAcorns}
-              acorns={this.state.acorns}
-              deleteAcorn={this.deleteAcorn}
-              editAcorn={this.editAcorn}
-              filterString={this.state.filterString}
-            />
+            <Route path="/AcornsList" component={AcornsList} />
+            <Route path="/Share" component={Share} />
         </div>
       </div>
 

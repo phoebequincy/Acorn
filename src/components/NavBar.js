@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+
 import {
     Collapse,
     Nav,
@@ -21,16 +21,8 @@ const linkInfo = [
         text: 'Acorns'
     },
     {
-        path: '/Login',
-        text: 'Login'
-    },
-    {
-        path: '/Signup',
-        text: 'Sign Up'
-    },
-    {
-        path: '/MyAcorns',
-        text: 'My Acorns'
+        path: '/AcornsList',
+        text: 'Acorn Library'
     },
     {
         path: '/Share',
@@ -72,15 +64,7 @@ class NavBar extends Component {
                 </NavItem>
 
                 <NavItem>
-                  <NavbarLink href="/Login/">Login</NavbarLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavbarLink href="/Signup/">Sign Up</NavbarLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavbarLink href="/MyAcorns/">My Acorns</NavbarLink>
+                  <NavbarLink href="/AcornsList/">Acorn Library</NavbarLink>
                 </NavItem>
 
                 <NavItem>

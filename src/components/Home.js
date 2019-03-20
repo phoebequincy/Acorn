@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Link, Button } from 'reactstrap';
-import Homestyle from "../stylesheets/Homestyle.css";
+import { Container, Row, Col, Button } from 'reactstrap';
+import "../stylesheets/Homestyle.css";
 
 const Home = (props) => {
 
