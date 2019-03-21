@@ -33,6 +33,8 @@ randomAcorn = async () => {
   render() {
 
     return (
+
+
       <Container className="acornImage">
         <Row id='staticpic'>
           <Col>
@@ -46,7 +48,7 @@ randomAcorn = async () => {
             <h2 className="display-3 text-center">{this.state.acornDisplay.title}</h2>
             <p className="lead text-center">{this.state.acornDisplay.content}</p>
 
-            <Button id="refresh" outline color="success" href="./Acorns">Again!
+            <Button id="refresh" className="orange" href="./Acorns">Again!
             </Button>
 
           </Col>

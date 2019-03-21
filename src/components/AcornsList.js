@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Modals from './Modals';
+import {Container,Row, Col } from 'reactstrap';
+
 
 
 class AcornsList extends Component {
@@ -9,18 +11,23 @@ class AcornsList extends Component {
   }
 
   render() {
-    
+
         return (
-          <div>
-            {this.props.acorns ? this.props.acorns.map((acorn) => {
+          <Container>
+            <Row>
+              <Col>
+              <h2>Acorns Library</h2>
+            {this.props.acorns && this.props.acorns.map((acorn) => {
               return (
                 <Modals
                   key={acorn.id}
                   acorn={acorn}
                 />
               )
-            }) : null}
-          </div>
+            }) }
+              </Col>
+            </Row>
+          </Container>
         )
     };
   }

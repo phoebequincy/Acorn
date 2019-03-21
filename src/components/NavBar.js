@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import {
     Collapse,
     Nav,
@@ -9,26 +8,10 @@ import {
     NavbarBrand,
     NavLink as NavbarLink,
 } from 'reactstrap';
-import Navstyle from '../stylesheets/Navstyle.css';
+import '../stylesheets/Navstyle.css';
 
-const linkInfo = [
-    {
-        path: '/',
-        text: 'Home'
-    },
-    {
-        path: '/Acorns',
-        text: 'Acorns'
-    },
-    {
-        path: '/AcornsList',
-        text: 'Acorns Library'
-    },
-    {
-        path: '/Share',
-        text: 'Share'
-    }
-]
+
+
 class NavBar extends Component {
   constructor(props) {
     super(props);

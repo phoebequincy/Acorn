@@ -16,11 +16,11 @@ const Home = (props) => {
             <hr className="my-2" />
               <p className="text-center">A store-house for instant support, wisdom and simple comforts.</p>
               <p className="lead"></p>
-              <p>
+              <div>
             <Col className="text-center">
               <Button outline color="success" href="./Acorns">Get an Acorn!</Button>
             </Col>
-            </p>
+            </div>
         </Col>
     </Container>
   );
