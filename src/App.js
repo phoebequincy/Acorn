@@ -6,25 +6,22 @@ import Acorns from './components/Acorns';
 import AcornsList from './components/AcornsList';
 import Share from './components/Share';
 
+const API = process.env.REACT_APP_API
+
 class App extends Component {
 
   state = {
-    acorns:{},
-    filterString: '',
+    acorns:[],
   }
 
   async componentDidMount() {
-    const response = await fetch('http://localhost:3000/acorns')
+    const response = await fetch(`${API}/acorns`)
     const json = await response.json()
 
     this.setState({...this.state, acorns: json} )
   }
 
-  handleSearch = (e) => {
-  let newState = {...this.state}
-  newState.filterString = e.target.value.toLowerCase()
-  this.setState({filterString : newState.filterString})
-  }
+
 
     render() {
 
@@ -34,17 +31,15 @@ class App extends Component {
           <NavBar />
             <Route path="/" exact component={Home} />
 
-            <Route path="/acorns" component={Acorns} />
+            <Route path="/acorns" component={() => <Acorns acorns={this.state.acorns} />}
+            />
 
             <Route path="/AcornsList"
-              component={AcornsList}
-              handlesearch={this.handlesearch}
-              renderAcorns={this.renderAcorns}
-              acorns={this.state.acorns}
-              filterString={this.state.filterString}
+              component={()=> <AcornsList acorns={this.state.acorns} />}
               />
 
             <Route path="/Share" component={Share} />
+
         </div>
       </div>
 

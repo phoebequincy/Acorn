@@ -3,6 +3,9 @@ import {Container, Col, Row, Button } from 'reactstrap';
 import '../stylesheets/Acornstyle.css'
 
 
+const API = process.env.REACT_APP_API
+
+
 class Acorns extends Component {
 
 state = {
@@ -15,16 +18,12 @@ this.randomAcorn()
 }
 
 randomAcorn = async () => {
-    const response = await fetch('http://localhost:3000/acorns')
+    const response = await fetch(`${API}/acorns`)
     const json = await response.json()
-    let data = json.map((acorns,i) => {
-      return {
-        ...acorns,
-      }
-    })
-    const randomNum = Math.floor(Math.random() * data.length)
+
+    const randomNum = Math.floor(Math.random() * json.length)
     const newState = {...this.state}
-    newState.acornDisplay = data[randomNum]
+    newState.acornDisplay = json[randomNum]
     this.setState({
       acornDisplay: newState.acornDisplay
     })
@@ -32,11 +31,12 @@ randomAcorn = async () => {
 
 
   render() {
+
     return (
       <Container className="acornImage">
         <Row id='staticpic'>
           <Col>
-          <img src="http://localhost:3000/images/goforaride.jpg" className="img-fluid" alt=""/>
+          <img src={`${API}${this.state.acornDisplay.src}`} className="img-fluid" alt=""/>
           </Col>
         </Row>
 
