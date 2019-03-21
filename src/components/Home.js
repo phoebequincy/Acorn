@@ -18,7 +18,7 @@ const Home = (props) => {
               <p className="lead"></p>
               <div>
             <Col className="text-center">
-              <Button outline color="success" href="./Acorns">Get an Acorn!</Button>
+              <Button outline className="orange" href="./Acorns">Get an Acorn!</Button>
             </Col>
             </div>
         </Col>

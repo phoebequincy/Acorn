@@ -1,3 +1,14 @@
+.orange {
+    border-color: #f79020;
+    border-width: 2px;
+    background-color: transparent;
+    color: #f79020;
+    font-size: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
 .navbar {
   color: white;
 }

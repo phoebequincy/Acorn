@@ -1,4 +1,15 @@
+.orange {
+  border-color: #f79020;
+  border-width: 2px;
+  background-color: transparent;
+  color: #f79020;
+  font-size: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
  #modals{
   padding-top: 2em;
-  align-content: center;
+  align-content: left;
 }

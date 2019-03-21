@@ -47,7 +47,7 @@ class NavBar extends Component {
                 </NavItem>
 
                 <NavItem>
-                  <NavbarLink href="/AcornsList/">Acorns Library</NavbarLink>
+                  <NavbarLink href="/AcornsList/">All the Acorns</NavbarLink>
                 </NavItem>
 
                 <NavItem>

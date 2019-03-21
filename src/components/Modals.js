@@ -29,7 +29,7 @@ class Modals extends React.Component {
 
       <Container id="modals" fluid>
           <React.Fragment>
-            <Button color="danger" onClick={this.toggle}>
+            <Button className="orange" onClick={this.toggle}>
               {this.props.acorn.title}
             </Button>
             <Modal
