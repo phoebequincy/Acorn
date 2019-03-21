@@ -8,7 +8,6 @@ class Acorns extends Component {
 state = {
 acorns: [],
 acornDisplay: {},
-selectedAcorn: {}
 }
 
 componentDidMount = async() => {
@@ -34,10 +33,10 @@ randomAcorn = async () => {
 
   render() {
     return (
-      <Container className="acornMessage">
+      <Container className="acornImage">
         <Row id='staticpic'>
           <Col>
-          <img src={this.state.acornDisplay.src} className="img-fluid" alt=""/>
+          <img src="http://localhost:3000/images/goforaride.jpg" className="img-fluid" alt=""/>
           </Col>
         </Row>
 

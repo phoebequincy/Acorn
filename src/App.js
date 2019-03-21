@@ -9,10 +9,8 @@ import Share from './components/Share';
 class App extends Component {
 
   state = {
-
     acorns:{},
     filterString: '',
-    composeOn: false
   }
 
   async componentDidMount() {
@@ -22,33 +20,11 @@ class App extends Component {
     this.setState({...this.state, acorns: json} )
   }
 
-
-  composeShowHide = () => {
-    this.setState({ composeOn: !this.state.composeOn })
+  handleSearch = (e) => {
+  let newState = {...this.state}
+  newState.filterString = e.target.value.toLowerCase()
+  this.setState({filterString : newState.filterString})
   }
-
-  addNewAcorn = async (acorn) => {
-        const response = await fetch('http://localhost:3000/acorns', {
-          method: 'POST',
-          body: JSON.stringify(acorn),
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        })
-        const json = await response.json()
-        this.setState({
-          ...this.state,
-          acorns: [...this.state.acorns, json]
-    })
-  }
-
-
-      handleSearch = (e) => {
-      let newState = {...this.state}
-      newState.filterString = e.target.value.toLowerCase()
-      this.setState({filterString : newState.filterString})
-      }
 
     render() {
 
@@ -57,8 +33,17 @@ class App extends Component {
         <div>
           <NavBar />
             <Route path="/" exact component={Home} />
+
             <Route path="/acorns" component={Acorns} />
-            <Route path="/AcornsList" component={AcornsList} />
+
+            <Route path="/AcornsList"
+              component={AcornsList}
+              handlesearch={this.handlesearch}
+              renderAcorns={this.renderAcorns}
+              acorns={this.state.acorns}
+              filterString={this.state.filterString}
+              />
+
             <Route path="/Share" component={Share} />
         </div>
       </div>

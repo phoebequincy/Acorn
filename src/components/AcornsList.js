@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   Container,
   Col,
@@ -17,6 +18,7 @@ class AcornsList extends Component {
   state = {
   acorns: [],
   acornDisplay: {},
+  filterString: ''
   }
   componentDidMount = async() => {
   this.getAcorn()
@@ -29,25 +31,31 @@ class AcornsList extends Component {
     this.setState({
       acornDisplay: json
     })
-    }
+  }
 
   render() {
-    console.log(this.state.acornDisplay)
+
+    const filterAcorns = this.state.acorns.filter(acorn =>  acorn.acorn.toLowerCase().includes(this.state.filterString) ||
+        acorn.name.toLowerCase().includes(this.state.filterString)
+      )
+
         return (
-          <Container>
-            <Col sm="12" md={{ size: 6, offset: 3 }}>
-              <h2>Acorns Library</h2>
-                <Card>
-                  <CardImg top width="100%" src="../images/goforaride.jpg" alt="" />
-                  <CardBody>
-                  <CardTitle>{this.state.acornDisplay.title}</CardTitle>
-                  <CardSubtitle>{this.state.acornDisplay.category}</CardSubtitle>
-                  <CardText>{this.state.acornDisplay.content}</CardText>
-                    <Button>Share</Button>
-                  </CardBody>
-                </Card>
-              </Col>
-          </Container>
+            <ul className="list-group">
+                <div>
+                {filterAcorns.map((acorn) => {
+                  return (
+                    <AcornsList
+                      key={this.state.acorns.id}
+                      id={this.state.acorns.id}
+                      title={this.state.acorns.title}
+                      category={this.state.acorns.category}
+                      content={this.state.acorns.content}
+                    />
+                  )
+              })}
+                </div>
+            </ul>
+
         )
     };
   }
