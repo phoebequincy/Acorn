@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
 import {
     Collapse,
     Nav,
@@ -9,34 +8,10 @@ import {
     NavbarBrand,
     NavLink as NavbarLink,
 } from 'reactstrap';
-import Navstyle from '../stylesheets/Navstyle.css';
+import '../stylesheets/Navstyle.css';
 
-const linkInfo = [
-    {
-        path: '/',
-        text: 'Home'
-    },
-    {
-        path: '/Acorns',
-        text: 'Acorns'
-    },
-    {
-        path: '/Login',
-        text: 'Login'
-    },
-    {
-        path: '/Signup',
-        text: 'Sign Up'
-    },
-    {
-        path: '/MyAcorns',
-        text: 'My Acorns'
-    },
-    {
-        path: '/Share',
-        text: 'Share'
-    }
-]
+
+
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -72,15 +47,7 @@ class NavBar extends Component {
                 </NavItem>
 
                 <NavItem>
-                  <NavbarLink href="/Login/">Login</NavbarLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavbarLink href="/Signup/">Sign Up</NavbarLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavbarLink href="/MyAcorns/">My Acorns</NavbarLink>
+                  <NavbarLink href="/AcornsList/">Acorns Library</NavbarLink>
                 </NavItem>
 
                 <NavItem>
