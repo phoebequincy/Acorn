@@ -29,10 +29,11 @@ class Modals extends React.Component {
 
       <Container id="modals" fluid>
           <React.Fragment>
+
             <Button className="orange" onClick={this.toggle}>
               {this.props.acorn.title}
             </Button>
-            <Modal
+            <Modal id="allmodals"
               isOpen={this.state.modal}
               toggle={this.toggle}
               className={this.props.className}
@@ -55,15 +56,12 @@ class Modals extends React.Component {
               </ModalBody>
               <ModalFooter>
                 <Button
-                  color="primary"
+                  className="orange"
                   onClick={this.toggle}
                 >
-                  Do Something
+                  Share
                 </Button>
                 {' '}
-                <Button color="secondary" onClick={this.toggle}>
-                  Cancel
-                </Button>
               </ModalFooter>
             </Modal>
           </React.Fragment>
@@ -74,8 +72,8 @@ class Modals extends React.Component {
 
 const styles = {
   imageSize: {
-    height: "8em",
-    width: "8em"
+    height: "9em",
+    width: "9em"
   }
 }
 

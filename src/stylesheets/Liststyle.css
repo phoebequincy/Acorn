@@ -1,0 +1,14 @@
+#title {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.jumbotron {
+  padding-top: 1em;
+  background-repeat: no-repeat;
+  background-color: white;
+  font-family: 'Roboto', cursive;
+  padding-bottom: 0;
+}
+.input-group {
+  padding-bottom: 1em;
+}
