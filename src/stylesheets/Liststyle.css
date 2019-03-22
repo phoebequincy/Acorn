@@ -13,3 +13,8 @@
 .input-group {
   padding-bottom: 1em;
 }
+#acorn {
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}

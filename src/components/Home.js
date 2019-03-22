@@ -7,10 +7,10 @@ const Home = (props) => {
   return (
     <Container>
       <Row>
-        <Col className= "text-center">
+        <Col id="logo" className= "text-center">
           <img
           src= '../images/acorns.Logov.4.png'
-          className="img-fluid"
+          className="img-fluid animated rollIn"
           alt="imglogo"
           />
         </Col>

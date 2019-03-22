@@ -42,7 +42,7 @@ inputChange= (e) =>{
         </Row>
           <Jumbotron>
             <Col className= "text-center">
-              <img src='../images/acornIcon.png' className="img-fluid" alt="imglogo" />
+              <img src='../images/acornIcon.png' id="acorn" className="animated pulse" alt="imglogo" />
             </Col>
               <Col>
                 <h3 className="text-center"><em>All the Acorns</em></h3>

@@ -56,7 +56,7 @@ class Modals extends React.Component {
                     />
                   </Col>
                   <Col md='8'>
-                    {this.props.acorn.content}
+                    <p>{this.props.acorn.content}</p>
                   </Col>
                 </Row>
               </ModalBody>
