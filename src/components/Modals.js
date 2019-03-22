@@ -12,6 +12,13 @@ import '../stylesheets/Modalstyle.css'
 
 const API = process.env.REACT_APP_API
 
+const styles = {
+  imageSize: {
+    height: "9em",
+    width: "9em"
+  }
+}
+
 class Modals extends React.Component {
   state = {
     modal: false,
@@ -26,22 +33,21 @@ class Modals extends React.Component {
   render() {
 
     return (
-
-      <Container id="modals" fluid>
+      <Container className="text-center" id="modals" fluid>
           <React.Fragment>
-
             <Button className="orange" onClick={this.toggle}>
               {this.props.acorn.title}
             </Button>
+
             <Modal id="allmodals"
               isOpen={this.state.modal}
               toggle={this.toggle}
               className={this.props.className}
             >
-              <ModalHeader toggle={this.toggle}>
+              <ModalHeader id="mheader" toggle={this.toggle}>
                 {this.props.acorn.title}
               </ModalHeader>
-              <ModalBody>
+              <ModalBody id="mbody">
                 <Row>
                   <Col md='4'>
                     <img src={`${API}${this.props.acorn.src}`}
@@ -67,13 +73,6 @@ class Modals extends React.Component {
           </React.Fragment>
       </Container>
     );
-  }
-}
-
-const styles = {
-  imageSize: {
-    height: "9em",
-    width: "9em"
   }
 }
 

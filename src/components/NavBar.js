@@ -10,8 +10,6 @@ import {
 } from 'reactstrap';
 import '../stylesheets/Navstyle.css';
 
-
-
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +45,7 @@ class NavBar extends Component {
                 </NavItem>
 
                 <NavItem>
-                  <NavbarLink href="/AcornsList/">All the Acorns</NavbarLink>
+                  <NavbarLink href="/AcornsList/">The Stash</NavbarLink>
                 </NavItem>
 
                 <NavItem>
@@ -58,7 +56,7 @@ class NavBar extends Component {
             </Collapse>
         </Navbar>
       </div>
-    );
+    )
   }
 }
 export default NavBar;

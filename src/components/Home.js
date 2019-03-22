@@ -8,22 +8,29 @@ const Home = (props) => {
     <Container>
       <Row>
         <Col className= "text-center">
-        <img src= 'acorns.Logov.4.png' className="img-fluid" alt="imglogo" />
+          <img
+          src= '../images/acorns.Logov.4.png'
+          className="img-fluid"
+          alt="imglogo"
+          />
         </Col>
       </Row>
-        <Col>
-          <h3 className="text-center"><em>Good things to get you through dark times.</em></h3>
-            <hr className="my-2" />
-              <p className="text-center">A store-house for instant support, wisdom and simple comforts.</p>
-              <p className="lead"></p>
-              <div>
-            <Col className="text-center">
-              <Button outline className="orange" href="./Acorns">Get an Acorn!</Button>
-            </Col>
-            </div>
-        </Col>
+          <Col>
+            <h3 className="text-center"><em>Good things to get you through dark times.</em></h3>
+              <hr className="my-2" />
+                <p className="text-center">A store-house for instant support, wisdom and simple comforts.</p>
+                <p className="lead"></p>
+                <div>
+              <Col className="text-center">
+                <Button outline className="orange" href="./Acorns">Surprise Me!</Button>
+              </Col>
+              <Col className="text-center">
+                <Button outline className="orange" href="./AcornsList">See the Stash</Button>
+              </Col>
+              </div>
+          </Col>
     </Container>
-  );
+  )
 }
 
 export default Home;

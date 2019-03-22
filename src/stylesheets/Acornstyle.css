@@ -3,7 +3,7 @@
   border-width: 2px;
   background-color: transparent;
   color: #f79020;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 35px;
   padding-left: 15px;
   padding-right: 15px;
@@ -14,8 +14,8 @@
   background-repeat: no-repeat;
 }
 
- #acornMessage{
-   padding-top: 2em;
+#acornMessage{
+   padding-top: .5em;
 }
 #category{
   font-style: italic;
@@ -24,4 +24,7 @@
 }
 #refresh{
   align-self: center
+}
+#search {
+  font-family: 'Raleway',sans-serif;
 }
