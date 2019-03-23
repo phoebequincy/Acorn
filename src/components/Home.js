@@ -9,7 +9,7 @@ const Home = (props) => {
       <Row>
         <Col id="logo" className= "text-center">
           <img
-          src= '../images/acorns.Logov.4.png'
+          src= '../images/acornslogo.png'
           className="img-fluid animated rollIn"
           alt="imglogo"
           />

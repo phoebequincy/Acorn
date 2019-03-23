@@ -48,6 +48,9 @@ randomAcorn = async () => {
             <p className="lead text-center">{this.state.acornDisplay.content}</p>
             <Button id="refresh" className="orange" href="./Acorns">Again!
             </Button>
+              <div>
+                <Button outline className="orange" href="../AcornsList">See the Stash</Button>
+              </div>
           </Col>
         </Row>
       </Container>
