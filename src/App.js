@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Acorns from './components/Acorns';
 import AcornsList from './components/AcornsList';
-import Share from './components/Share';
+
 
 const API = process.env.REACT_APP_API
 
@@ -45,8 +45,6 @@ class App extends Component {
                     handleSearch={this.handleSearch}
                   />}
               />
-
-              <Route path="/Share" component={Share} />
           </div>
         </div>
     )

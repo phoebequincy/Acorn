@@ -47,7 +47,7 @@ inputChange= (e) =>{
               <Col>
                 <h3 className="text-center"><em>All the Acorns</em></h3>
                   <hr className="my-2" />
-                    <p className="text-center">Click on an Acorn to view and share with a friend!</p>
+                    <p className="text-center">Click on an Acorn to view!</p>
                     <p className="lead"></p>
               </Col>
           </Jumbotron>
