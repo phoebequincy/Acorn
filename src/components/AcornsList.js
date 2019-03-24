@@ -57,6 +57,7 @@ inputChange= (e) =>{
                   <Modals
                     key={acorn.id}
                     acorn={acorn}
+                    messageStore={this.props.messageStore}
                   />
                 )
               }) }

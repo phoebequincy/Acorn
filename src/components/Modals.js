@@ -8,7 +8,8 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter } from 'reactstrap';
-import '../stylesheets/Modalstyle.css'
+import '../stylesheets/Modalstyle.css';
+import {Link} from 'react-browser-router';
 
 const API = process.env.REACT_APP_API
 
@@ -61,13 +62,24 @@ class Modals extends React.Component {
                 </Row>
               </ModalBody>
               <ModalFooter>
+                <Link to="/SMSForm">
                 <Button
                   className="orange"
-                  onClick={this.toggle}
+                  onClick={this.props.messageStore}
+                  id={this.props.acorn.id}
                 >
                   Share
                 </Button>
                 {' '}
+                </Link>
+
+                <Button
+                  className="orange"
+                  onClick={this.toggle}
+                >
+                  Cancel
+                </Button>
+
               </ModalFooter>
             </Modal>
           </React.Fragment>

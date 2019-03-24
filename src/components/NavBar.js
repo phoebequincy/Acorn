@@ -48,6 +48,10 @@ class NavBar extends Component {
                   <NavbarLink href="/AcornsList/">The Stash</NavbarLink>
                 </NavItem>
 
+                <NavItem>
+                  <NavbarLink href="/SMSForm/">Share</NavbarLink>
+                </NavItem>
+
               </Nav>
             </Collapse>
         </Navbar>
