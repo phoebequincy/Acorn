@@ -65,7 +65,7 @@ class Modals extends React.Component {
                   className="orange"
                   onClick={this.toggle}
                 >
-                  Share
+                  Close
                 </Button>
                 {' '}
               </ModalFooter>
