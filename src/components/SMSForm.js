@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import '../stylesheets/SMSForm.css';
-
+import {
+  FormGroup,
+  Button,
+  Container,
+  Input,
+  }
+from 'reactstrap';
 
 
 class SMSForm extends Component {
@@ -58,37 +64,44 @@ class SMSForm extends Component {
   render() {
 
     return (
-      <div>
-      {this.props.selectedAcorn &&
+      <Container> {this.props.selectedAcorn &&
 
-      <form
-        onSubmit={this.onSubmit}
-        className={this.state.error ? 'error sms-form' : 'sms-form'}
-      >
-        <div>
-          <label htmlFor="to">To:</label>
-          <input
-            type="tel"
-            name="to"
-            id="to"
-            value={this.state.message.to}
-            onChange={this.onHandleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="body">Body:</label>
-          <textarea
-            name="body"
-            id="body"
-            defaultValue={this.props.selectedAcorn.content}
-            onChange={this.onHandleChange}
-          />
-        </div>
-        <button type="submit" disabled={this.state.submitting}>
-          Send message
-        </button>
-      </form>}
-      </div>
+            <FormGroup
+              onSubmit={this.onSubmit}
+              className={this.state.error ? 'error sms-form' : 'sms-form'}
+            >
+              <div>
+              <h1>Send an Acorn</h1>
+              </div>
+
+                <p>
+                <label htmlFor="to">Send To</label>
+                <Input
+
+                  type="tel"
+                  name="to"
+                  id="to"
+                  value={this.state.message.to}
+                  onChange={this.onHandleChange}
+                />
+                </p>
+
+                <p>
+                <label htmlFor="body">Your Message</label>
+                <Input
+                  name="body"
+                  id="body"
+                  defaultValue={this.props.selectedAcorn.content}
+                  onChange={this.onHandleChange}
+                />
+                </p>
+
+              <Button className="orange" type="submit" disabled={this.state.submitting}>
+                Send message
+              </Button>
+
+      </FormGroup>}
+    </Container>
     );
   }
 }
