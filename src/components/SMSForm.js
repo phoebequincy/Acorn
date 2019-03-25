@@ -21,7 +21,7 @@ class SMSForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
-    fetch('https://api.twilio.com/2010-04-01/Accounts/d1cb54ca013a54479a0b01c952b74f02/Messages.json', {
+    fetch('/api/messages.json', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

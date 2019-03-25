@@ -11,6 +11,7 @@ import {
 import '../stylesheets/Modalstyle.css';
 import {Link} from 'react-browser-router';
 
+
 const API = process.env.REACT_APP_API
 
 const styles = {
@@ -62,6 +63,7 @@ class Modals extends React.Component {
                 </Row>
               </ModalBody>
               <ModalFooter>
+
                 <Link to="/SMSForm">
                 <Button
                   className="orange"

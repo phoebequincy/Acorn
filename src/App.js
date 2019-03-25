@@ -26,6 +26,8 @@ class App extends Component {
 
   messageStore = (e) => {
   const selectedAcorn = this.state.acorns.find(acorn => parseInt(acorn.id) === parseInt(e.target.id))
+
+
     this.setState({
       ...this.state, selectedAcorn: selectedAcorn
     })
