@@ -3,11 +3,11 @@ Like squirrels storing acorns for the winter, Acorn provides a store-house of in
 
 
 ## Deployed Site
-Coming soon . . .
+theacornstash.surge.sh
 
 
 ## Style Guide
-![Acorn Style Guide](src/images/acorn_style-guide.png)
+![Acorn Style Guide](public/images/acorn_style-guide.png)
 
 
 ## Wireframe
@@ -20,4 +20,4 @@ Coming soon . . .
 [Trello Planning Board](https://trello.com/b/xQnuFAwx/phoebeq4project)
 
 ## Entity Relationship Diagram
-![Acorn ERD](src/images/Acorn_ER_Diagram.png)
+![Acorn ERD](public/images/Acorn_ER_Diagram.png)
