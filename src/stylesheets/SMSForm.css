@@ -1,15 +1,18 @@
 .sms-form {
+  font-family: inherit;
   text-align: left;
   padding: 1em;
 }
 .sms-form label {
   display: block;
+  font-family: 'Raleway',sans-serif!important;
 }
 .sms-form input,
 .sms-form textarea {
   font-size: 1em;
   width: 100%;
   box-sizing: border-box;
+  font-family: 'Raleway',sans-serif!important;
 }
 .sms-form div {
   margin-bottom: 0.5em;
@@ -20,4 +23,7 @@
 }
 .sms-form.error {
   outline: 2px solid #f00;
+}
+#header {
+  font-family: 'Raleway',sans-serif!important;
 }

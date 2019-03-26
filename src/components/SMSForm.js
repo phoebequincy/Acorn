@@ -75,9 +75,11 @@ class SMSForm extends Component {
           onSubmit={this.onSubmit}
           className={this.state.error ? 'error sms-form' : 'sms-form'}
         >
-            <div>
-            <h1>Send an Acorn</h1>
+            <div id="header">
+              <h1>Send an Acorn</h1>
+                <p>Your Acorn will be attached to your message as a link.</p>
             </div>
+
               <p>
               <label htmlFor="to">Send To</label>
               <Input
