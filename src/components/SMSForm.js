@@ -104,7 +104,12 @@ class SMSForm extends Component {
               />
               </p>
 
-              <Button className="orange" type="submit" onClick={ this.onSubmit }  disabled={this.state.submitting}>
+              <Button
+                id="orange"
+                type="submit"
+                onClick={ this.onSubmit }
+                disabled={this.state.submitting}
+                >
                 Send message
               </Button>
        </FormGroup>}
