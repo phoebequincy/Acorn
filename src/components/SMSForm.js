@@ -7,6 +7,7 @@ import {
   Input,
   }
 from 'reactstrap';
+const API = process.env.REACT_APP_API
 
 
 class SMSForm extends Component {
@@ -27,37 +28,42 @@ class SMSForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
-    fetch('/api/messages.json', {
+
+    const body = {
+      to: this.state.message.to,
+      body: `http://google.com ${this.state.message.body}`
+    }
+
+    fetch(`${API}/sms`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state.message)
+      body: JSON.stringify(body)
     })
-    .then(res => JSON.parse(res.json()))
-    .then(data => {
-        if (data.success) {
-          this.setState({
-            error: false,
-            submitting: false,
-            message: {
-              to: '',
-              body: ''
-            }
-          });
-        } else {
-          this.setState({
-            error: true,
-            submitting: false
-          });
-        }
-      });
+    .then(res => {
+      if (res.ok) {
+        this.setState({
+          error: false,
+          submitting: false,
+          message: {
+            to: '',
+            body: ''
+          }
+        });
+      } else {
+        this.setState({
+          error: true,
+          submitting: false
+        });
+      }
+    });
   }
 
   onHandleChange(event) {
-    const name = event.target.getAttribute('name');
+    const inputField = event.target.getAttribute('name');
     this.setState({
-      message: { ...this.state.message, [name]: event.target.value }
+      message: { ...this.state.message, [inputField]: event.target.value }
     });
   }
 
@@ -65,42 +71,41 @@ class SMSForm extends Component {
 
     return (
       <Container> {this.props.selectedAcorn &&
+        <FormGroup
+          onSubmit={this.onSubmit}
+          className={this.state.error ? 'error sms-form' : 'sms-form'}
+        >
+            <div>
+            <h1>Send an Acorn</h1>
+            </div>
+              <p>
+              <label htmlFor="to">Send To</label>
+              <Input
 
-            <FormGroup
-              onSubmit={this.onSubmit}
-              className={this.state.error ? 'error sms-form' : 'sms-form'}
-            >
-              <div>
-              <h1>Send an Acorn</h1>
-              </div>
+                type="tel"
+                name="to"
+                id="to"
+                placeholder="Your number here . . ."
+                value={this.state.message.to}
+                onChange={this.onHandleChange}
+              />
+              </p>
 
-                <p>
-                <label htmlFor="to">Send To</label>
-                <Input
+              <p>
+              <label htmlFor="body">Your Message</label>
+              <Input
+                name="body"
+                id="body"
+                placeholder="Add a personal message . . ."
+                onChange={this.onHandleChange}
+                value={this.state.message.body}
+              />
+              </p>
 
-                  type="tel"
-                  name="to"
-                  id="to"
-                  value={this.state.message.to}
-                  onChange={this.onHandleChange}
-                />
-                </p>
-
-                <p>
-                <label htmlFor="body">Your Message</label>
-                <Input
-                  name="body"
-                  id="body"
-                  defaultValue={this.props.selectedAcorn.content}
-                  onChange={this.onHandleChange}
-                />
-                </p>
-
-              <Button className="orange" type="submit" disabled={this.state.submitting}>
+              <Button className="orange" type="submit" onClick={ this.onSubmit }  disabled={this.state.submitting}>
                 Send message
               </Button>
-
-      </FormGroup>}
+       </FormGroup>}
     </Container>
     );
   }
