@@ -31,7 +31,7 @@ class SMSForm extends Component {
 
     const body = {
       to: this.state.message.to,
-      body: `http://google.com ${this.state.message.body}`
+      body: `http://theacornstash.surge.sh/ ${this.state.message.body}`
     }
 
     fetch(`${API}/sms`, {
@@ -107,7 +107,7 @@ class SMSForm extends Component {
               <Button
                 id="orange"
                 type="submit"
-                onClick={ this.onSubmit }
+                onClick={this.onSubmit}
                 disabled={this.state.submitting}
                 >
                 Send message

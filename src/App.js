@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Acorns from './components/Acorns';
 import AcornsList from './components/AcornsList';
 import SMSForm from './components/SMSForm';
+import Modals from './components/Modals';
 
 
 const API = process.env.REACT_APP_API
@@ -62,6 +63,15 @@ class App extends Component {
                 component={()=>
                   <SMSForm
                   selectedAcorn={this.state.selectedAcorn}
+                  />}
+              />
+
+              <Route path="/acorns/:id"
+                component={({match})=>
+                  <Modals
+                    key={match.params.acorn.id}
+                    acorn={"acorn"}
+                    messageStore={this.props.messageStore}
                   />}
               />
           </div>

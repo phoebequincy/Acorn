@@ -70,7 +70,7 @@ class Modals extends React.Component {
                   onClick={this.props.messageStore}
                   id={this.props.acorn.id}
                 >
-                  Close
+                  Share
                 </Button>
                 {' '}
                 </Link>
