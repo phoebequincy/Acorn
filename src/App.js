@@ -19,7 +19,7 @@ class App extends Component {
 
 
   async componentDidMount() {
-    const response = await fetch(`${API}/acorns`)
+    const response = await fetch(`${API}`)
     const json = await response.json()
 
     this.setState({...this.state, acorns: json})
